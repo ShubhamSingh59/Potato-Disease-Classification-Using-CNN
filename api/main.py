@@ -8,6 +8,8 @@ import tensorflow as tf
 
 app = FastAPI()
 
+PORT = 8000
+
 origins = [
     "http://localhost",
     "http://localhost:3000",
@@ -46,4 +48,4 @@ async def predict(file: UploadFile = File(...)):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='localhost', port=PORT)
