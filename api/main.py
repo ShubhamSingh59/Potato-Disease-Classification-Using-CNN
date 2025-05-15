@@ -11,8 +11,11 @@ app = FastAPI()
 PORT = 8000
 
 origins = [
-    "https://potato-disease-classification-using-cnn.vercel.app"
+    "http://localhost",
+    "http://localhost:3000",
+    "https://potato-disease-classification-using-cnn.vercel.app",  # Add this!
 ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -47,4 +50,4 @@ async def predict(file: UploadFile = File(...)):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='localhost', port=PORT)
+    uvicorn.run(app, host='0.0.0.0', port=PORT)
