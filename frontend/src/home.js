@@ -159,7 +159,7 @@ export const ImageUpload = () => {
       try {
         let res = await axios({
           method: "post",
-          url: process.env.REACT_APP_API_URL || "http://localhost:8000/predict",
+          url: process.env.REACT_APP_API_URL || "https://potato-disease-classification-using-cnn-4.onrender.com/predict",
           data: formData,
           headers: {
             "Content-Type": "multipart/form-data"

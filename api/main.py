@@ -11,8 +11,7 @@ app = FastAPI()
 PORT = 8000
 
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
+    "https://potato-disease-classification-using-cnn.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
